@@ -8,6 +8,10 @@
   <link href="sass/responsive.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+
   <title>Partiel2</title>
 </head>
 
@@ -21,15 +25,14 @@
   <!-- SECTION MABOITE-->
 
 
-  <section class="box">
-    <article> Les 3 blocs </article>
-    <article> Les vidéos </article>
-    <article> Le tableau </article>
-  </section>
-
+  <main class="box">
+    <article id="ar1" href="#maBoite"> Les 3 blocs </article>
+    <article href="#mavideo"> Les vidéos </article>
+    <article href="#tab"> Le tableau </article>
+  </main>
 
 <!-- SECTION 1 -->
-  <section id="maBoite">
+  <middle id="maBoite">
     <tbody>
 
       <div class="div1">
@@ -44,6 +47,10 @@
         </svg>
       </div>
 
+
+
+
+
       <article class="div1">
         <h2> WIFI </h2>
         <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione nihil unde quam, deserunt sunt molestias delectus quibusdam magnam recusandae facere cupiditate consequuntur impedit atque veniam accusantium quo similique nemo dignissimos adipisci nulla et earum libero? Nesciunt odit velit quae veritatis.</p>
@@ -53,7 +60,6 @@
           <rect width="4" height="9" x="6" y="6" rx="1"/>
           <rect width="4" height="14" x="11" y="1" rx="1"/>
         </svg>
-
       </article>
 
 
@@ -65,25 +71,24 @@
         <svg class="bi bi-cloud-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M3.5 13a3.5 3.5 0 11.59-6.95 5.002 5.002 0 119.804 1.98A2.5 2.5 0 0113.5 13h-10z" clip-rule="evenodd"/>
         </svg>
-
       </nav>
 
     </tbody>
 
-  </section>
+  </middle>
 
   <!-- SECTION 2 -->
 
-<!-- dans une section suivante, mettre dans une colonne pas trop large des vignettes, chaque vignette devra faire charger dans une seconde et large colonne une vidéo youtube -->
+<!-- dans une section suivante, mettre dans une colonne pas trop large des vignettes, chaque vignette devra faire charger une vidéo (en 1s) et  une large colonne pour la vidéo youtube -->
 
 
-<!--pour cela repérer bien quel code dans les iframes youtube change pour le mettre en information sur chaque vignette (par exemple dans un data-id), pour ensuite la changer sur l'iframe
+<!--pour cela repérer bien quel code (dans les iframes youtube) change pour le mettre en information sur chaque vignette (par exemple dans un data-id), pour ensuite la changer sur l'iframe
 
 Pour cela, à partir du code identifiant de la vidéo ciblée, remplacez le contenu de la source (src) de l'iframe
 
-En jquery, .attr('nom de l'attribut', 'nouvelle valeur de l'attribut') permet de changer le contenu de cet attribut
-par défaut, la première vidéo sera chargée
-mettre ensuite en place les codes nécessaires pour que l'iframe reste responsive soit en utilisant bootstrap ou en suivant cet -->
+En jquery, .attr('nom de l'attribut', 'nouvelle valeur de l'attribut') permet de changer le contenu de cet attribut-->
+
+
 
 <section id="mavideo" class="row">
 
@@ -98,8 +103,10 @@ mettre ensuite en place les codes nécessaires pour que l'iframe reste responsiv
     </ul>
   </nav>
 
+
+<!-- mettre en lien un truc dans les codes iframes avec les vignettes-->
   <div class="col-9">
-    <iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/PJYTLHATxak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PJYTLHATxak" frameborder="0"  allowfullscreen></iframe>
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/PJYTLHATxak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/fBjof9YTlao" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -108,13 +115,42 @@ mettre ensuite en place les codes nécessaires pour que l'iframe reste responsiv
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ZxVKPIUhXEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/UE1sMTndA48" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-
-
 </section>
 
+<!-- TABLEAUUUUU -->
 
-
-
+<section id="tab">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
 
 
