@@ -27,7 +27,7 @@ body{
 
 // ARTICLE -> LES 3 BLOCS !!!
 .box{
-  display: flex;
+  display: flex; // aligné
   flex-wrap: wrap; // Permet de mettre la ou y'a de la place, si pas de place, alors redescend en bas
   article{
     background-color: #aaaaaa;
@@ -48,16 +48,10 @@ body{
 #maBoite{
   display: grid;
   grid-template-rows: (3, 1fr);
+
 }
 
 
-// #other{
-//   text-align: center;
-//   a{
-//     font-size: 50px;
-//     color: white;
-//   }
-// }
 
 // ----------------------------------------------------------------------
 //Mettre en fond la couleur..pour les TABLETTE uniquements...
@@ -70,18 +64,7 @@ body{
     display: block;
     background-color: burlywood;
   }
-  // ARTICLE ---> BOX 1 2 et 3
-  .box{
-    div{
-      width: calc(50% - 10px);
-    }
-  }
 
-  //Ma boite
-  // #maBoite{
-  //   display: flex;
-  //   flex-wrap: wrap;
-  // }
 
 
   #maBoite{
@@ -106,7 +89,7 @@ body{
       background-color: #ccc;
   }
 
-  h1{
+  h2{
     text-align: center;
     text-transform: 400;
   }
@@ -116,12 +99,11 @@ body{
   }
 }
 
-
-#maBoite svg{
-  height: 50px;
-  width: 30px; // taille
-  padding-left: 170px;
-}
+// #maBoite svg{
+//   height: 50px;
+//   width: 30px; // taille
+//   padding-left: 170px;
+// }
 
 
 
@@ -133,14 +115,7 @@ body{
       margin: 5px;
       padding: 5px;
   }
-  // nav{
-  //     display: flex;
-  //     flex-direction: column;
-  //     ul{
-  //         padding: 0;
-  //         list-style: none;
-  //     }
-  // }
+
 }
 // ----------------------------------------------------------------------
 // pour les ORDINATEURS
@@ -156,19 +131,37 @@ body{
 
   #maBoite{
     //taille des 3 cases rose titre lorem
-    grid-template-columns: 400px 400px 400px;
+    grid-template-columns: 300px auto 200px;
     grid-template-rows: repeat(1, 1fr);
-    // nav{
-    //     grid-column-start: 3;
-    //     grid-row-start: 1;
-    // }
-    // figure{
-    //     grid-column-start: 1;
-    //     grid-row-start: 1;
-    // }
-    // article{
-    //     grid-column-start: 2;
-    //     grid-row-start: 1;
-    // }
+    nav{
+      grid-column-start: 3;
+      grid-row-start: 1;
+  }
+  figure{
+      grid-column-start: 1;
+      grid-row-start: 1;
+  }
+  article{
+      grid-column-start: 2;
+      grid-row-start: 1;
+  }
+  svg{
+    width: auto;
+  }
+
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
