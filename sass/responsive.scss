@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Tamma+2&display=swap');
+
+
+//titre milieu
+body h1{
+  text-align: center;
+}
+
+
+// Valeur  telephone, tablette...
+$mobile-max: 767px;
+$tablet: 768px;
+$tablet-max: 991px;
+$desktop: 992px;
+
+// Fond body
+body{
+  background-color: #fff;
+  h4{
+    color: black;
+  }
+}
+
+.tablet{
+  display: none;
+}
+
+// ARTICLE -> LES 3 BLOCS !!!
+.box{
+  display: flex;
+  flex-wrap: wrap; // Permet de mettre la ou y'a de la place, si pas de place, alors redescend en bas
+  article{
+    background-color: #aaaaaa;
+    width: 100%;
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+
+//Permet d'avoir des fonds pour toutes les div
+//POUR LE RESPONSIVE DES BLOCS
+#maBoite{
+  display: grid;
+  grid-template-rows: (3, 1fr);
+}
+
+
+// #other{
+//   text-align: center;
+//   a{
+//     font-size: 50px;
+//     color: white;
+//   }
+// }
+
+// ----------------------------------------------------------------------
+//Mettre en fond la couleur..pour les TABLETTE uniquements...
+@media (min-width: $tablet) AND (max-width: $tablet-max) {
+  body{
+    background-color: #fff;
+  }
+  //Permet de faire en sorte que le truc s'affiche qu'a partir d'une certaine taille
+  .tablet{
+    display: block;
+    background-color: burlywood;
+  }
+  // ARTICLE ---> BOX 1 2 et 3
+  .box{
+    div{
+      width: calc(50% - 10px);
+    }
+  }
+
+  //Ma boite
+  // #maBoite{
+  //   display: flex;
+  //   flex-wrap: wrap;
+  // }
+
+
+  #maBoite{
+    grid-template-columns: auto auto 200px;
+    grid-template-rows: (2, 1fr);
+    &>*{
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+    nav{
+        grid-row: span 3;
+        grid-column: span 1;
+        grid-column-start: 3;
+    }
+  }
+}
+
+
+#maboiteBootStrap{
+  background-color: white;
+  &>*{
+      background-color: #ccc;
+  }
+
+  h1{
+    text-align: center;
+    text-transform: 400;
+  }
+  p{
+    padding-top:30px;
+
+  }
+}
+
+
+#maBoite svg{
+  height: 50px;
+  width: 30px; // taille
+  padding-left: 170px;
+}
+
+
+
+//https://css-tricks.com/snippets/css/complete-guide-grid/
+#maBoite{
+  background-color: white;
+  &>*{
+      background-color: #aa6969;
+      margin: 5px;
+      padding: 5px;
+  }
+  // nav{
+  //     display: flex;
+  //     flex-direction: column;
+  //     ul{
+  //         padding: 0;
+  //         list-style: none;
+  //     }
+  // }
+}
+// ----------------------------------------------------------------------
+// pour les ORDINATEURS
+@media (min-width: $desktop){
+  body{
+    background-color: #fff;
+  }
+  .box{
+    article{
+      width: calc(33.33333333% - 10px);
+    }
+  }
+
+  #maBoite{
+    //taille des 3 cases rose titre lorem
+    grid-template-columns: 400px 400px 400px;
+    grid-template-rows: repeat(1, 1fr);
+    // nav{
+    //     grid-column-start: 3;
+    //     grid-row-start: 1;
+    // }
+    // figure{
+    //     grid-column-start: 1;
+    //     grid-row-start: 1;
+    // }
+    // article{
+    //     grid-column-start: 2;
+    //     grid-row-start: 1;
+    // }
+}
+}
